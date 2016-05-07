@@ -1,0 +1,26 @@
+{
+
+  "manifest_version": 2,
+  "name": "Goodreads 'Search MAM' button",
+  "version": "1.0",
+ 
+  "description": "Adds a 'Search MAM' button to books on Goodreads",
+  "icons": {
+    "48": "icons/mam.ico"
+  },
+
+  "applications": {
+    "gecko": {
+      "id": "goodreads_mam_button@mozilla.org",
+      "strict_min_version": "45.0"
+    }
+  },
+
+  "content_scripts": [
+    {
+      "matches": ["*://www.goodreads.com/book/show/*"],
+      "js": ["inject.js"]
+    }
+  ]
+
+}
